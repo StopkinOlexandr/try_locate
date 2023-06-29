@@ -1,6 +1,6 @@
+import Coordinates from "./Coordinates";
+
 export default interface LocateState {
-    ip_address: string,
-    latitude: number,
-    longitude: number,
-    city: string
+    coordinates: Coordinates,
+    error?: string
 }

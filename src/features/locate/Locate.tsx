@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../store";
 import { selectLocateIP } from "./selectors";
-import { getIP, getlocationIP } from './locateSlice';
+import { getlocationIP } from './locateSlice';
 
 
 export default function Locate(): JSX.Element {
@@ -10,7 +10,10 @@ export default function Locate(): JSX.Element {
     // const ip = useSelector(selectLocateIP);
     const value = useSelector(selectLocateIP);
 
-    useEffect(() => { dispatch(getlocationIP()); }, [dispatch]);
+    useEffect(() => {
+        dispatch(getlocationIP());
+    }, [dispatch]);
+    // console.log("ip:" + value.ip_address);
 
     return (
         <>

@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import counterReducer from './features/counter/counterSlice';
+
 import locateReducer from './features/locate/locateSlice';
 
 const store = configureStore({
   reducer: {
-    counter: counterReducer,
+
     locate: locateReducer
   }
 });

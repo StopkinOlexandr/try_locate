@@ -1,9 +1,4 @@
 import { RootState } from '../../store';
-import LocateState from './types/LocateState';
+import Coordinates from './types/Coordinates';
 
-
-
-export const selectLocateIP = (state: RootState): LocateState => state.locate;
-
-//location
-
+export const selectLocateIP = (state: RootState): Coordinates => state.locate.coordinates;
