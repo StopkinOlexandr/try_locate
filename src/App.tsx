@@ -9,7 +9,10 @@ function App(): JSX.Element {
     <div className="App">
       <br />
       <Locate />
-      <MapComponent />
+      <div>
+        <MapComponent />
+      </div>
+
     </div>
   );
 }
