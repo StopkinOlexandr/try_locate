@@ -34,7 +34,6 @@ const locateSlice = createSlice({
       .addCase(getlocationIP.fulfilled, (state, action) => {
         // в action.payload придет результат из thunk
         state.coordinates = action.payload;
-        console.log('slice');
       })
       .addCase(getlocationIP.rejected, (state) => {
         state.error = 'Error: products fetch rejected';

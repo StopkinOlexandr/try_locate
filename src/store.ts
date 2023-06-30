@@ -1,12 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import BetterAccuracy from './features/betteraccuracy/BetterAccuracy';
 import locateReducer from './features/locate/locateSlice';
-import betteraccuracyReducer from './features/betteraccuracy/BetterAccuracySlice';
-
+import routReducer from "./features/map/rootSlice";
 const store = configureStore({
   reducer: {
-    // betteraccuracy: betteraccuracyReducer,
+    root: routReducer,
     locate: locateReducer
   }
 });
